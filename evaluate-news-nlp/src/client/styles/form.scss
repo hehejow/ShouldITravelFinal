@@ -1,7 +1,12 @@
+$main-color: #003366; // Cool dark blue
+$secondary-color: #f8f8f8; // Off-white
+
 form {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
+    background-color: $main-color;
+    color: $secondary-color;
 }
 
 input {
