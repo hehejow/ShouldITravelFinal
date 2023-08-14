@@ -8,6 +8,7 @@ function handleSubmit(event) {
     fetch(`/api/analyze?url=${encodeURIComponent(formText)}`)
         .then(res => res.json())
         .then(function(response) {
+            console.log(response)
             // Display the API response in the results element
             document.getElementById('results').innerHTML = `
                 Polarity: ${response.polarity}<br>
