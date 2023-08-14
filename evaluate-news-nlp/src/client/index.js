@@ -3,8 +3,8 @@ import './styles/base.scss'
 import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
-import { addResultsEventHandler } from './js/handler2'
-import { handleSubmit } from './js/handler';
+import { addResultsEventHandler } from './js/errorHandler'
+import { handleSubmit } from './js/formHandler';
 
 const form = document.querySelector('form');
 

@@ -15,8 +15,8 @@ function handleSubmit(event) {
             // Display the API response in the results element
             document.getElementById('results').innerHTML = `
           Agreement: ${response.agreement}<br>
-          Subjectivity: ${response.subjectivity}<br> 
-          Text: ${sentenceText}
+          Subjectivity: ${response.subjectivity}<br><br><br>
+          Text: <br><br>${sentenceText}
         `;
         })
         .catch(function (error) {

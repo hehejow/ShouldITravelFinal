@@ -15,3 +15,16 @@ section {
     max-width: 800px;
     margin: 50px auto;
 }
+
+#results {
+    border: 10px solid $main-color;
+    padding: 10px;
+}
+
+strong {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem; 
+    color: $main-color;
+}
