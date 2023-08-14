@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
 
-        <header>
-            <div class="kicker">
-                ARTICLE READER
-            </div>
-        </header>
+<body>
 
-        <main>
-            <section>
-                <form class="">
-                    <input id="name" type="text" name="url" value="" placeholder="URL">
-                    <input type="submit" value="Submit">
-                  </form>
-            </section>
+    <header>
+        <div class="kicker">
+            ARTICLE READER
+        </div>
+    </header>
 
-            <section>
-                <strong>Article Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+    <main>
+        <section>
+            <form class="">
+                <input id="name" type="text" name="url" value="" placeholder="URL">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
 
-        <footer>
-        </footer>
+        <section>
+            <strong>Article Results:</strong>
+            <div id="results"></div>
+        </section>
+    </main>
 
-    </body>
+    <footer>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
 </html>
