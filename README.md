@@ -2,7 +2,7 @@
 
 
 ## Overview
-This is an  web app that uses a Web API to analyze the Text of user provided URLs to dynamically display the text and additional info to the website UI.
+This is an  web app that uses a Web API to analyze the text of user provided URLs to dynamically display the text and additional info to the website UI.
 
 
 
