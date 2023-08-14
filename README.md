@@ -4,7 +4,7 @@
 This is an  web app that uses a Web API to analyze the Text of user provided URLs to dynamically display the text and additional info to the website UI. 
 
 ## Instructions
-From the root folder install the dependencies with `npm i`. After that build the app by using `npm run build-prod`. Finally, serve the app with `npm start`. The ArticleReader is now served on http://localhost:8040/.
+From the root folder /evaluate-news-nlp install the dependencies with `npm i`. After that build the app by using `npm run build-prod`. Finally, serve the app with `npm start`. The ArticleReader is now served on http://localhost:8040/.
 
 ## Additional Functionality
 
