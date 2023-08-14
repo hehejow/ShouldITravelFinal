@@ -4,7 +4,14 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import { handleSubmit } from './js/handler';
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  handleSubmit(event);
+});
 
 console.log(checkForName);
 
