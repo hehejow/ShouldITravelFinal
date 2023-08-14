@@ -27,14 +27,12 @@ app.get('/test', function (req, res) {
 
 app.get('/api/analyze', async (req, res) => {
   try {
-    const response = await axios.post('https://api.meaningcloud.com/sentiment-2.1', {
-      key: apiKey,
-      url: req.query.url,
-      lang: 'en',
+    const response = await axios.post(`https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&url=${req.query.url}&lang=en`, {
     });
+    console.log('dady', response.data);
     res.send(response.data);
   } catch (error) {
-    console.error(error);
+    console.error('lol', error);
     res.status(500).send('Error');
   }
 });

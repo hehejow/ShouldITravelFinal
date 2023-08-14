@@ -3,7 +3,7 @@ import './styles/base.scss'
 import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
-import { checkForName } from './js/nameChecker'
+import { addResultsEventHandler } from './js/handler2'
 import { handleSubmit } from './js/handler';
 
 const form = document.querySelector('form');
@@ -13,7 +13,5 @@ form.addEventListener('submit', (event) => {
   handleSubmit(event);
 });
 
-console.log(checkForName);
-
-alert("I EXIST")
-console.log("CHANGE!!");
+// Call the function to add the event handler
+addResultsEventHandler();
