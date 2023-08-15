@@ -28,13 +28,20 @@ export function handleSubmit() {
       });
   }
   
-  export function updateUI(data) {
-    document.querySelector('#city').innerHTML = 'Your trip to ' + data.city + ' in ' + data.remainingDays + ' Days:<br>';
-    document.querySelector('#picture').innerHTML = '<img src="' + data.imageURL + '" alt="City Picture">';
-  
-    const forecastIndex = data.remainingDays;
+  function updateUI(data, forecastIndex) {
     const selectedForecast = data.forecast[forecastIndex];
   
-    document.querySelector('#weather').innerHTML = 'Weather: ' + '<br>' + selectedForecast.weather + '<br>';
+    if (selectedForecast && selectedForecast.hasOwnProperty('weather')) {
+      document.querySelector('#weather').innerHTML = 'Weather: ' + '<br>' + selectedForecast.weather + '<br>';
+    } else {
+      document.querySelector('#weather').innerHTML = 'Weather information not available';
+    }
+  
     document.querySelector('#temp').innerHTML = 'Temperature: ' + Math.round(selectedForecast.temperature) + ' °C';
   }
+  const listeningClient = function(statuscode) {
+    console.log(`Running on localhost: 5000`);
+    return statuscode
+  }
+
+module.exports = { listeningClient };

@@ -19,10 +19,11 @@ app.get('/', function (req, res) {
 const port = 5000;
 const server = app.listen(port, listening);
 
-function listening() {
-  console.log('Server running');
+const listening = function(statuscode) {
   console.log(`Running on localhost: ${port}`);
+  return statuscode
 }
+
 
 // API keys
 const geonamesAPIKey = 'hehejow';
@@ -124,3 +125,4 @@ app.post('/weather', (req, res) => {
 app.get('/projectData', (req, res) => {
   res.send(projectData);
 });
+module.exports = {listening};
