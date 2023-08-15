@@ -17,13 +17,13 @@ app.get('/', function (req, res) {
   res.sendFile('dist/index.html');
 });
 const port = 5000;
-const server = app.listen(port, listening);
+
 
 const listening = function(statuscode) {
   console.log(`Running on localhost: ${port}`);
   return statuscode
 }
-
+const server = app.listen(port, listening);
 
 // API keys
 const geonamesAPIKey = 'hehejow';
