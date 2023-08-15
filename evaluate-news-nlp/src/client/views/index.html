@@ -1,37 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Weather Journal</title>
+    <meta charset="utf-8" />
+    <title>Should I Travel</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="app">
-        <div class="holder headline">
-            Weather Journal App
+    <div class="container" id="container">
+        <header class="nav">
+        </header>
+        <div class="bb">
+            <h1 class="title1"> Should I Travel</h1>
         </div>
-        <div class="holder zip">
-            <label for="zip">Enter city you want to travel to</label>
-            <input type="text" id="zip" placeholder="enter city here">
+        <div class="sbl">
         </div>
-        <div class="holder feel">
-            <label for="trip-date">Trip Date:</label>
-            <input type="date" id="trip-date" name="trip-date">
-            <button id="generate" type="submit"> Generate </button>
-        </div>
-        <div class="holder entry">
-            <div class="title">Most Recent Entry</div>
-            <div id="entryHolder">
-                <div id="date"></div>
-                <div id="temp"></div>
-                <div id="content"></div>
+        <div class="sbr"></div>
+        <div class="main">
+            <div class="post" id="post2">
+                <label for="zip">...to</label>
+                <input type="text" id="zip" placeholder="enter city here">
+            </div>
+            <div class="post" id="post3">
+                <label for="trip-date">....on</label>
+                <input type="date" id="trip-date" name="trip-date">
+            </div>
+            <div class="post" id="post4">
+                <button id="generate" type="submit"> Show Weather </button>
+            </div>
+            <div class="post2" id="post5">
+                <div id="entryHolder">
+                    <div id="city"></div>
+                    <div id="weather"></div>
+                    <div id="temp"></div>
+                </div>
+            </div>
+            <div class="post2" id="post6">
+                <div id="picture"></div>
             </div>
         </div>
+        <footer class="ft">
+        </footer>
     </div>
-    <script src="app.js" type="text/javascript"></script>
-
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 </body>
 
 </html>
